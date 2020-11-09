@@ -1,0 +1,39 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /demo
+
+spring:
+  datasource:
+    username: root
+    password: Fqc**19890827
+    url: jdbc:mysql://localhost:3306/testdata?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none  # 第一次建表create  后面用update，要不然每次重启都会新建表
+    show-sql: true
+
+  mail:
+    #163
+    host: smtp.163.com
+    username: allenvan13@163.com
+    password: FQYSGMRXWDUKAXTJ
+    protocol: smtp
+    default-encoding: UTF-8
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+      mail.smtp.socketFactory.port: 465
+      mail.smtp.socketFactory.class: javax.net.ssl.SSLSocketFactory
+      mail.smtp.socketFactory.fallback: false
+
+mail-config:
+  environmental: 邮件测试
+    # 发件人邮箱
+  from: allenvan13@163.com
+    # 收件人邮箱（抄送人）
+  recipient:
+      - 59221499@qq.com
