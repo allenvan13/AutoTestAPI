@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+    <suite name="suite名字">
+        <listeners >
+            <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+            <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+        </listeners>
+
+        <suite-files >
+            <!--模块1-->
+            <suite-file path="testng1.xml" name="XXXXXX"></suite-file>
+
+            <!--模块2-->
+            <suite-file path="testng2.xml" name="YYYYYY"></suite-file>
+
+        </suite-files>
+
+    </suite>

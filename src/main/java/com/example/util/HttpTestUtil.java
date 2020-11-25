@@ -30,7 +30,8 @@ public class HttpTestUtil {
     private static String URL_GET1 = "http://localhost:8088/demo/shopProduct_my?id=1";
     private static String URL_POST1 = "http://localhost:8088/demo/postShopProduct1";
     private static String URL_POST2 = "http://localhost:8088/demo/postShopProduct2";
-    private static String URL_GET2 = "https://www.maomin.club/fy/get/";
+//    private static String URL_GET2 = "https://www.maomin.club/fy/get/";
+    private static String URL_POST3 = "http://localhost:8090/admin/role/list.json";
 
 
     public static void main(String[] args) throws IOException{
@@ -38,13 +39,15 @@ public class HttpTestUtil {
         System.out.println("=================Test===================");
 
         Map<String, String> body = new HashMap<>();
-        body.put("stu_name","测试");
+        body.put("","");
         Map<String, String> header = new HashMap<>();
-        header.put("Content-Type","*/*");
+        header.put("Cookie","Pycharm-8dbeb98c=b5b23471-5f91-45d3-a166-64067fa3c291;BC2MyCookie=o/zrl06072ntqM4bSxjOxs" +
+                "MxiWR0ECDo;Hm_lvt_8b02a318fde5831da10426656a43d03c=1599124825;_ga=GA1.1.432711559.1599124825;JSESSI" +
+                "ONID=8663AF8E421468EF49B2702067D750AD");
         try {
 //            HttpClientResult rs = htu.doGet(URL_GET1);
-//            HttpClientResult rs = htu.doPost(URL_POST2,body);
-            HttpClientResult rs = htu.doGet(URL_GET2);
+            HttpClientResult rs = htu.doPost(URL_POST3,body,header);
+//            HttpClientResult rs = htu.doGet(URL_GET2);
             System.out.println(rs.getContent());
         } catch (Exception e) {
             e.printStackTrace();

@@ -6,10 +6,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -20,17 +17,18 @@ import java.util.Date;
 
 @Data
 @Table(name = "api_test_base")
+@Entity
 public class ApiTestData {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id_bigint")
-    @ExcelIgnore
+
+    @javax.persistence.Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id_bigint")
     private Long id;
 
     //excel读取
-    @Id
-    @Column(name = "caseID_varchar")
+    @javax.persistence.Id
+    @Column(name = "caseID_varchar", nullable=false)
     @ExcelProperty(value = "用例编号", index = 0)
     private String caseId;
 

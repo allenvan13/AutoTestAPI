@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+    <suite thread-count="1" parallel="false" name="suite测试名字">
+
+        <listeners>
+            <listener class-name="org.uncommons.reportng.HTMLReporter" />
+            <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+        </listeners>
+
+        <test verbose="2" preserve-order="true" name="test测试名字" parallel="false">
+            <classes>
+                <class name="com.example.test.TestTestng">
+                    <methods>
+                        <include name="Test009"/>
+                        <include name="Test008"/>
+                        <include name="Test007"/>
+                        <include name="Test006"/>
+                        <include name="Test005"/>
+                        <include name="Test004"/>
+                        <include name="Test003"/>
+                        <include name="Test002"/>
+                    </methods>
+                </class>
+
+            </classes>
+        </test>
+
+        <test verbose="2" preserve-order="true" name="test测试名字2" parallel="false">
+            <classes>
+                <class name="com.example.test.TestTestng">
+                    <methods>
+                        <include name="Test009"/>
+                        <include name="Test008"/>
+                        <include name="Test007"/>
+                        <include name="Test006"/>
+                        <include name="Test005"/>
+                        <include name="Test004"/>
+                        <include name="Test003"/>
+                        <include name="Test002"/>
+                    </methods>
+                </class>
+
+            </classes>
+        </test>
+
+    </suite>
+

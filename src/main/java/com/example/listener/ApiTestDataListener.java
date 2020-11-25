@@ -2,11 +2,8 @@ package com.example.listener;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.DAO.ApiTestRepository;
 import com.example.Entity.ApiTestData;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.alibaba.excel.context.AnalysisContext;
 import com.alibaba.excel.event.AnalysisEventListener;
@@ -23,8 +20,6 @@ public class ApiTestDataListener extends AnalysisEventListener<ApiTestData> {
     private static final int BATCH_COUNT = 100;
     List<ApiTestData> list = new ArrayList<>();
 
-    @Resource
-    private ApiTestRepository apiTestRepository;
 
     /**
      * 这个每一条数据解析都会来调用
